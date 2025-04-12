@@ -5,9 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>B&M | Paris Collection</title>
 
-    <!-- Google Fonts: Poppins -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&display=swap"
       rel="stylesheet"
     />
 
@@ -16,46 +23,21 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        background: url("assets/img/bg.jpg") no-repeat center center;
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-      }
-
-      .story-section {
-        background-color: rgba(255, 255, 255, 0.95);
-        padding: 60px 20px;
-        color: #000;
-      }
-
-      .story-image {
-        border-radius: 20px;
-        border: 5px solid #000;
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-      }
-
-      .subsection-title {
-        font-weight: 600;
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
-      }
-    </style>
   </head>
+
   <body>
-    <!-- Section 1: Header (not fluid, centered) -->
-    <section
+    <!-- Section 1: Header -->
+    <header
       style="
         background: url('assets/img/bg.jpg') no-repeat center center;
         background-size: cover;
@@ -65,18 +47,21 @@
         <div class="row align-items-center">
           <!-- Left: Logo + Text -->
           <div class="col-lg-6 mb-4 mb-lg-0">
-            <!-- Logo and Name -->
-            <div class="d-flex align-items-center mb-3">
+            <a
+              href="#"
+              class="d-flex align-items-center mb-3 text-decoration-none text-dark logo-link"
+            >
               <img
                 src="assets/img/logo.png"
-                alt="B&Mc Logo"
+                alt="B&M Logo"
+                title="Back to Home"
                 style="width: 80px; height: auto"
                 class="me-3"
               />
               <div class="fw-bold lh-sm" style="font-size: 18px">
                 BRYAN &<br />MARCELINA<br />CAROLINA
               </div>
-            </div>
+            </a>
 
             <!-- Quote -->
             <blockquote class="fs-5 mb-3">
@@ -132,6 +117,7 @@
               class="img-fluid w-100 h-100 mx-auto"
               style="max-height: 600px; object-fit: fill"
               alt="Model Shirt"
+              title="Paris Collection Model"
             />
             <div class="position-absolute top-0 end-0 me-3 mt-3">
               <svg
@@ -147,79 +133,418 @@
           </div>
         </div>
       </div>
-    </section>
+    </header>
 
-    <!-- Section 2: Story (full width) -->
+    <!-- Section 2: Story 1 -->
     <section
+      id="story1"
       style="
         background: url('assets/img/bg-story1.png') no-repeat center center;
         background-size: cover;
       "
     >
-      <div class="container-fluid story-section">
-        <div class="text-center mb-5">
-          <h1 class="display-4 fw-bold">
-            The
-            <span style="font-family: 'Brush Script MT', cursive">Story</span>
-          </h1>
-        </div>
-
-        <div class="row justify-content-center align-items-center mb-5">
+      <div class="container-fluid story-section py-5">
+        <div class="row justify-content-center align-items-center">
           <div class="col-md-5 text-center">
+            <div class="logo-container">
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="text">
+                <span class="the">The</span>
+                <span class="story">Story</span>
+              </div>
+            </div>
             <img
               src="assets/img/the-flory.png"
               alt="Paris Footprint"
+              title="Paris Journey"
               class="story-image mb-4 mb-md-0"
             />
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 p-3">
             <h5 class="subsection-title">
               PARIS SUR LA TERRE – LES TRACES DANS LA VILLE DE L'AMOUR
             </h5>
             <p>
               Par un matin froid, alors qu'une fine couche de neige recouvrait
-              encore les rues de Paris...
-            </p>
-            <p>Léo venait d’arriver à Paris après des années à en rêver...</p>
-            <p>
-              En marchant, il aperçut un artiste de rue en train de peindre...
-            </p>
-            <p>
+              encore les rues de Paris, un jeune homme nommé Léo marchait le
+              long du trottoir désert. Le soleil venait tout juste d'apparaître
+              derrière les vieux bâtiments, projetant ses rayons dorés et créant
+              de longues ombres sur les pavés.
+              <br />
+              Léo venait d’arriver à Paris après des années à en rêver. Pour
+              lui, cette ville n’était pas seulement une destination
+              touristique, mais le début d’un voyage vers la découverte de soi.
+              Il avançait sur la route enneigée, ressentant chaque brise qui
+              portait l’odeur du café des petits bistrots parisiens.
+              <br />
+              En marchant, il aperçut un artiste de rue en train de peindre un
+              paysage urbain, ses mains engourdies par le froid. Léo s’arrêta,
+              observant chaque coup de pinceau qui dessinait la rue qu’il venait
+              d’emprunter. "Paris est une toile, et chaque pas que nous faisons
+              en fait partie du tableau," dit l’artiste avec un sourire
+              chaleureux.
+              <br />
               Léo sourit. Il comprit alors que ce voyage n’était pas seulement
-              une question de lieux à visiter...
+              une question de lieux à visiter, mais d’histoires à y laisser.
+              Paris n’était pas seulement une ville sur une carte, mais un récit
+              vivant, inscrit entre les pas et les rayons du soleil.
+              <b
+                >Paris sur la terre—Paris sur cette terre, un véritable
+                miracle.</b
+              >
             </p>
-
-            <h5 class="subsection-title mt-5">
+            <h5 class="subsection-title mt-3">
               PARIS ON EARTH – THE FOOTPRINTS IN THE CITY OF LOVE
             </h5>
             <p>
               On a cold morning, as a thin layer of snow still covered the
-              streets of Paris...
-            </p>
-            <p>
-              Leo had just arrived in Paris after years of dreaming about it...
-            </p>
-            <p>
+              streets of Paris, a young man named Leo walked along the empty
+              sidewalk. The sun had just appeared behind the old buildings,
+              casting its golden rays and creating long shadows on the
+              cobblestones.
+              <br />
+              Leo had just arrived in Paris after years of dreaming about it.
+              For him, this city was not just a tourist destination but the
+              beginning of a journey toward self-discovery. He walked along the
+              snowy road, feeling every breeze carrying the scent of coffee from
+              the small Parisian bistros.
+              <br />
               As he walked, he noticed a street artist painting an urban
-              landscape...
-            </p>
-            <p>
+              landscape, his hands numb from the cold. Leo stopped, watching
+              every brushstroke that depicted the very street he had just walked
+              on. "Paris is a canvas, and every step we take becomes part of the
+              painting," said the artist with a warm smile.
+              <br />
               Leo smiled. He then realized that this journey was not just about
-              the places to visit...
+              the places to visit but about the stories to be left behind. Paris
+              was not just a city on a map but a living tale, written between
+              footsteps and rays of sunlight.
+              <b> Paris on Earth—Paris on this earth, a true miracle.</b>
             </p>
+            <div class="mt-4 text-center text-md-start">
+              <a href="produk.html" class="btn btn-outline-primary px-4 py-2"
+                >Explore the Collection</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <hr class="my-5" style="border: none; height: 2px; background: linear-gradient(to right, transparent, #ccc, transparent);"> -->
+
+    <!-- Section 3: Story 2 -->
+    <section
+      id="story2"
+      style="
+        background: url('assets/img/bg-story2.png') no-repeat center center;
+        background-size: cover;
+      "
+    >
+      <div class="container-fluid story-section py-5">
+        <div
+          class="row justify-content-center align-items-center flex-md-row-reverse"
+        >
+          <div class="col-md-5 text-center">
+            <div class="logo-container mx-auto">
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="text">
+                <span class="the">The</span>
+                <span class="story">Story</span>
+              </div>
+            </div>
+            <img
+              src="assets/img/story2.png"
+              alt="Story 2"
+              class="story-image mb-4 mb-md-0"
+            />
+          </div>
+          <div class="col-lg-6 story-text p-3">
+            <h5 class="subsection-title">UN “BONJOUR” EN ATTENTE</h5>
+            <p>
+              Le soleil se lève doucement sur Paris, projetant une lumière dorée
+              sur les façades haussmanniennes qui bordent l’avenue. C’est un
+              matin froid, mais la ville est déjà en mouvement. Les voitures
+              roulent tranquillement sur les pavés, les passants se pressent
+              pour commencer leur journée, et dans un café au coin de la rue,
+              une femme attend, le regard fixé sur la route.
+              <br />
+              Elle s’appelle Camille. Dans ses mains, un petit carnet de notes
+              rempli de mots jamais envoyés, de lettres rédigées mais jamais
+              osées. Ce matin, elle est venue ici avec l’espoir de le revoir.
+              Lui.
+              <br />
+              Mathieu et Camille s’étaient rencontrés à cet endroit, un matin
+              comme celui-ci, par le plus grand des hasards. Un regard échangé
+              en traversant la rue, une maladresse, un café renversé, et puis…
+              un sourire. Depuis, ils avaient pris l’habitude de se retrouver
+              ici, au même café, chaque matin, juste avant que la ville ne
+              s’éveille complètement.
+              <br />
+              Mais ce matin est différent. Camille ne sait pas s’il viendra.
+              Leur dernière conversation avait été floue, pleine de doutes et de
+              non-dits. Pourtant, elle garde espoir. Parce qu’à Paris, l’amour
+              est comme cette lumière du matin : parfois timide, parfois
+              éclatant, mais toujours là, quelque part entre les ombres et
+              l’aube.
+              <br />
+              Alors, elle attend. Un café fumant devant elle, un "Bonjour" sur
+              ses lèvres, prêt à être offert à celui qu’elle espère revoir.
+            </p>
+
+            <h5 class="subsection-title mt-3">A WAITING “HELLO”</h5>
+            <p>
+              The sun rises gently over Paris, casting a golden light on the
+              Haussmannian facades lining the avenue. It is a cold morning, but
+              the city is already in motion. Cars roll quietly over the
+              cobblestones, pedestrians hurry to start their day, and in a café
+              on the corner, a woman waits, her gaze fixed on the road.
+              <br />
+              Her name is Camille. In her hands, a small notebook filled with
+              words never sent, letters written but never dared to be delivered.
+              This morning, she has come here with the hope of seeing him again.
+              Him.
+              <br />
+              Mathieu and Camille had met at this very spot, on a morning just
+              like this, by pure chance. A glance exchanged while crossing the
+              street, a clumsy moment, a spilled coffee, and then... a smile.
+              Since then, they had made it a habit to meet here, at the same
+              café, every morning, just before the city fully awakened.
+              <br />
+              But this morning is different. Camille doesn’t know if he will
+              come. Their last conversation had been unclear, full of doubts and
+              unspoken words. Yet, she still holds onto hope. Because in Paris,
+              love is like this morning light: sometimes shy, sometimes radiant,
+              but always there, somewhere between the shadows and the dawn.
+              <br />
+              So, she waits. A steaming coffee in front of her, a "Good morning"
+              on her lips, ready to be offered to the one she hopes to see
+              again.
+            </p>
+            <div class="mt-4 text-center text-md-start">
+              <a href="produk.html" class="btn btn-outline-primary px-4 py-2"
+                >Explore the Collection</a
+              >
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: Placeholder -->
-    <section style="background-color: #f9f9f9">
-      <div class="container py-5">
-        <h2 class="text-center mb-4">Our Inspiration</h2>
-        <p class="text-center">
-          Coming soon: more stories behind the designs...
-        </p>
+    <!-- Section 3: Story 2 -->
+    <section
+      id="story2"
+      style="
+        background: url('assets/img/bg-story2.png') no-repeat center center;
+        background-size: cover;
+      "
+    >
+      <div class="container-fluid story-section py-5">
+        <div class="row justify-content-center align-items-center">
+          <!-- Gambar kiri -->
+          <div class="col-md-5 text-center mt-3">
+            <div class="logo-container mx-auto">
+              <div class="dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+              <div class="text">
+                <span class="the">The</span>
+                <span class="story">Story</span>
+              </div>
+            </div>
+            <img
+              src="assets/img/story2.png"
+              alt="Story 2"
+              class="story-image mb-4 mb-md-0"
+            />
+          </div>
+
+          <!-- Teks kanan -->
+          <div class="col-lg-6 story-text p-3">
+            <h5 class="subsection-title">La Lumière du Dimanche à Paris</h5>
+            <p>
+              Le dimanche matin à Paris a toujours un charme particulier. Le
+              soleil levant éclaire la Madeleine, l’un des édifices les plus
+              majestueux de la ville. Sa lumière dorée danse sur les colonnes
+              classiques, comme pour réveiller les histoires oubliées cachées
+              dans ses pierres imposantes.
+              <br />
+              Au coin de la rue, une femme vêtue de noir se tient immobile,
+              contemplant l’édifice avec admiration. À côté d’elle, un homme
+              avec un sac à dos marche à grands pas, comme s’il poursuivait un
+              temps qui ne cesse de filer. Une voiture passe lentement,
+              reflétant le rythme paisible du week-end parisien.
+              <br />
+              Pour certains, le dimanche est un moment de repos, une occasion de
+              savourer un café dans un petit bistrot ou de flâner dans les rues
+              historiques de la ville. Pour d’autres, c’est une journée
+              d’inspiration, de réflexion, ou simplement d’émerveillement devant
+              la beauté du monde qui se transforme sous une lumière toujours
+              changeante.
+              <br />
+              Aujourd’hui, Paris murmure doucement : "Bon Dimanche !"—Un appel à
+              profiter de l’instant, à apprécier la beauté qui nous entoure et à
+              ressentir la magie de cette ville qui ne dort jamais, même dans
+              ses rêves.
+            </p>
+
+            <h5 class="subsection-title mt-3">The Sunday Light in Paris</h5>
+            <p>
+              Sunday morning in Paris always has a special charm. The rising sun
+              illuminates La Madeleine, one of the city's most majestic
+              buildings. Its golden light dances on the classical columns, as if
+              awakening forgotten stories hidden within its imposing stones.
+              <br />
+              At the corner of the street, a woman dressed in black stands
+              still, gazing at the building in admiration. Beside her, a man
+              with a backpack strides forward, as if chasing time that never
+              stops slipping away. A car passes slowly, reflecting the peaceful
+              rhythm of the Parisian weekend.
+              <br />
+              For some, Sunday is a time to rest, an opportunity to savor a
+              coffee in a small bistro or to wander through the city's historic
+              streets. For others, it is a day of inspiration, reflection, or
+              simply a moment to marvel at the beauty of a world that constantly
+              transforms under an ever-changing light.
+              <br />
+              Today, Paris whispers softly: "Bon Dimanche!"—A gentle call to
+              embrace the moment, appreciate the beauty around us, and feel the
+              magic of this city that never truly sleeps, even in its dreams.
+            </p>
+            <div class="mt-4 text-center text-md-start">
+              <a href="produk.html" class="btn btn-outline-primary px-4 py-2"
+                >Explore the Collection</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <!-- Section 5: Story 4 -->
+    <!-- <section style="background: url('assets/img/bg-story4.png') no-repeat center center; background-size: cover;">
+    <div class="container-fluid story-section py-5">
+      <div class="row justify-content-center align-items-center mb-5 flex-md-row-reverse">
+        <div class="col-md-5 text-center">
+          <img src="assets/img/story4-img.png" alt="Story 4" class="story-image mb-4 mb-md-0" />
+        </div>
+        <div class="col-lg-6">
+          <h5 class="subsection-title">LE CAFÉ DU TEMPS PERDU</h5>
+          <p>... (isi cerita dalam bahasa Prancis) ...</p>
+
+          <h5 class="subsection-title mt-5">THE CAFE OF LOST TIME</h5>
+          <p>... (isi cerita dalam bahasa Inggris) ...</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+    <!-- Order Now Section with Promo Banner -->
+    <section
+      class="order-now-section bg-dark text-white text-center py-5 position-relative overflow-hidden"
+    >
+      <div class="container">
+        <h2 class="fw-bold mb-4 promo-heading" style="font-size: 38px">
+          Ready to Place Your Order?
+        </h2>
+        <p class="mb-4" style="font-size: 20px">
+          Choose your favorite items and get them delivered right to your door!
+        </p>
+
+        <!-- Promo Badge -->
+        <div class="promo-badge mb-4">
+          <span class="badge bg-danger p-3 fs-4"
+            >🔥 Special Promo: Free Shipping This Month! 🔥</span
+          >
+        </div>
+
+        <!-- Order Button -->
+        <a
+          href="order.html"
+          class="btn btn-warning btn-lg px-5 py-3 rounded-pill order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+
+      <!-- Confetti Animation -->
+      <div class="confetti"></div>
+
+      <!-- Star Effect for Background -->
+      <div class="stars"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-light pt-5 pb-4" style="background-color: #1a1a1a">
+      <div class="container">
+        <div
+          class="row justify-content-between align-items-center text-center text-md-start"
+        >
+          <!-- Logo Kiri -->
+          <div class="col-lg-4 mb-4 ms-5 mb-lg-0">
+            <a
+              href="#"
+              class="d-flex align-items-center justify-content-center justify-content-lg-start text-decoration-none text-white logo-link"
+            >
+              <img
+                src="assets/img/logo.png"
+                alt="B&M Logo"
+                title="Back to Home"
+                style="width: 80px; height: auto"
+                class="me-3"
+              />
+              <div class="fw-bold lh-sm" style="font-size: 18px">
+                BRYAN &<br />MARCELINA<br />CAROLINA
+              </div>
+            </a>
+          </div>
+
+          <!-- Sosial Media Kanan -->
+          <div class="col-lg-4 text-center text-lg-end">
+            <div class="mb-2">
+              <a
+                href="https://www.instagram.com/yourhandle"
+                target="_blank"
+                class="text-light text-decoration-none me-3"
+              >
+                <i class="bi bi-instagram" style="font-size: 1.5rem"></i>
+              </a>
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                class="text-light text-decoration-none me-3"
+              >
+                <i class="bi bi-whatsapp" style="font-size: 1.5rem"></i>
+              </a>
+              <a
+                href="https://www.tiktok.com/@yourhandle"
+                target="_blank"
+                class="text-light text-decoration-none"
+              >
+                <i class="bi bi-tiktok" style="font-size: 1.5rem"></i>
+              </a>
+            </div>
+            <small class="d-block mt-2">Jl. Mawar No.123, Jakarta</small>
+            <small class="d-block">Telp: +62 812-3456-7890</small>
+          </div>
+        </div>
+
+        <!-- Garis & Copyright -->
+        <hr class="my-4 border-light" />
+        <div class="text-center">
+          <small
+            >&copy; 2025 Bryan & Marcelina Carolina. All rights reserved.</small
+          >
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -1,8 +1,51 @@
+/* * {
+  box-sizing: border-box;
+  border: 1px solid red; 
+} */
+        /* Pastikan seluruh body dan elemen lainnya mengisi layar */
+        body, html {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+      }
+
+      .container-fluid {
+          width: 100%;
+          padding: 0;
+      }
+
+      .row {
+          width: 100%;
+      }
+
+      /* Pastikan gambar dan elemen lainnya responsif */
+      img {
+          max-width: 100%;
+          height: auto;
+      }
+
+.custom-divider {
+  margin-top: -1px;
+  line-height: 0;
+  position: relative;
+}
+
+.svg-divider {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #fff;
   color: #111;
   margin: 0;
+  overflow-x: hidden;
+    scroll-behavior: smooth;
+width: 100%;
+
 }
 
 blockquote {
@@ -26,6 +69,180 @@ h5 {
   padding: 0 !important;
 }
 
+
+.story-section {
+  background-color: rgba(255, 255, 255, 0.70);
+  padding: 60px 20px;
+  color: #000;
+  height: auto;
+
+}
+
+.story-image {
+  /* border-radius: 20px; */
+  max-width: 100%;
+
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.subsection-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  /* padding-left: 5px; */
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+}
+
+.dots {
+  display: flex;
+  gap: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(0, 0, 0);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.text .the {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  padding-left: 20px;
+}
+
+.text .story {
+  font-family: "Great Vibes", cursive;
+  font-size: 8rem;
+  margin-top: -10px;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
+
+a.logo-link:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.story-image {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.story-image:hover {
+  transform: scale(1.05);
+}
+
+.subsection-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+.story-section p {
+  font-size: 0.80rem; /* atau 15px, sesuaikan dengan selera */
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-left: 10px;
+
+}
+
+
+.story-section h5.subsection-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-left: 8px;
+}
+.story-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+#story1 {
+  position: relative;
+  overflow: hidden;
+}
+
+#story1::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7); /* nilai bisa kamu ubah untuk tingkat kehalusan */
+  z-index: 1;
+}
+
+#story1 .container-fluid {
+  position: relative;
+  z-index: 2;
+}
+.order-btn {
+  position: relative;
+  animation: bounce 1.5s infinite ease-in-out;
+  background: linear-gradient(45deg, #ff9900, #ffcc00);
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 10; /* Set z-index to ensure the button is on top */
+}
+
+.order-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
+}
+
+/* Confetti Effect */
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2; /* Make sure confetti is behind the button */
+  opacity: 0.7;
+  animation: confetti 2s infinite;
+}
+
+/* Promo Graphics */
+.promo-graphics {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Make sure the graphics are behind the button */
+}
+
+.promo-icon {
+  width: 100px;
+  height: auto;
+  animation: rotateIcon 5s infinite linear;
+  z-index: 1; /* Ensure icon is behind the button */
+}
 /* Hapus margin bottom gambar di bawah */
 img {
   margin-bottom: 0;
@@ -34,4 +251,45 @@ img {
   h1.display-6 {
     font-size: 1.8rem;
   }
+}
+
+
+/* Pastikan elemen mencakup 100% lebar */
+.order-now-section,
+footer {
+  width: 100%; /* Memastikan bagian ini mencakup 100% layar */
+  padding: 0; /* Menghapus padding yang tidak diinginkan */
+  margin: 0;  /* Menghapus margin yang tidak diinginkan */
+}
+
+/* Menggunakan container-fluid agar tidak terbatasi oleh lebar container */
+.order-now-section .container,
+footer .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0; /* Menghapus padding dalam container */
+}
+
+/* Agar tombol dan badge tetap dalam batas yang diinginkan */
+.order-now-section .btn,
+.order-now-section .badge {
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+}
+
+/* Pastikan footer memiliki padding yang tepat */
+footer {
+  background-color: #1a1a1a;
+}
+
+footer .container {
+  max-width: 100%; /* Memastikan container footer mengisi lebar layar */
+}
+
+/* Pastikan logo footer tidak terpotong */
+footer .logo-link img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
