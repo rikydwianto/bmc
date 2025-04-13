@@ -36,6 +36,43 @@
   </head>
 
   <body>
+    <nav id="scrollNavbar" class="navbar navbar-expand-lg fixed-top euro-navbar shadow-sm" style="display: none; background-color: #fef4e8;">
+      <div class="container">
+        <!-- Logo dan Nama -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/img/logo.png" alt="Logo" width="80" height="36" class="me-2 ">
+          <div class="fw-bold lh-sm" style="font-size: 16px;">
+            BRYAN &<br />MARCELINA<br />CAROLINA
+          </div>
+        </a>
+    
+        <!-- Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#story">Story</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+        
+    
     <!-- Section 1: Header -->
     <header
       style="
@@ -135,8 +172,9 @@
       </div>
     </header>
 
-    <!-- Section 2: Story 1 -->
-    <section
+<div id="story">
+      <!-- Section 2: Story 1 -->
+      <section
       id="story1"
       style="
         background: url('assets/img/bg-story1.png') no-repeat center center;
@@ -429,24 +467,9 @@
         </div>
       </div>
     </section>
+</div>
 
-    <!-- Section 5: Story 4 -->
-    <!-- <section style="background: url('assets/img/bg-story4.png') no-repeat center center; background-size: cover;">
-    <div class="container-fluid story-section py-5">
-      <div class="row justify-content-center align-items-center mb-5 flex-md-row-reverse">
-        <div class="col-md-5 text-center">
-          <img src="assets/img/story4-img.png" alt="Story 4" class="story-image mb-4 mb-md-0" />
-        </div>
-        <div class="col-lg-6">
-          <h5 class="subsection-title">LE CAFÉ DU TEMPS PERDU</h5>
-          <p>... (isi cerita dalam bahasa Prancis) ...</p>
-
-          <h5 class="subsection-title mt-5">THE CAFE OF LOST TIME</h5>
-          <p>... (isi cerita dalam bahasa Inggris) ...</p>
-        </div>
-      </div>
-    </div>
-  </section> -->
+  
     <!-- Order Now Section with Promo Banner -->
     <section
       class="order-now-section bg-dark text-white text-center py-5 position-relative overflow-hidden"
@@ -483,7 +506,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-light pt-5 pb-4" style="background-color: #1a1a1a">
+    <footer class="text-light pt-5 pb-4" id="contact" style="background-color: #1a1a1a">
       <div class="container">
         <div
           class="row justify-content-between align-items-center text-center text-md-start"
@@ -546,5 +569,8 @@
         </div>
       </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
