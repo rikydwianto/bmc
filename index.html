@@ -71,106 +71,123 @@
       </div>
     </nav>
     
-        
-    
-    <!-- Section 1: Header -->
     <header
-      style="
-        background: url('assets/img/bg.jpg') no-repeat center center;
-        background-size: cover;
-      "
-    >
-      <div class="container py-5">
-        <div class="row align-items-center">
-          <!-- Left: Logo + Text -->
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <a
-              href="#"
-              class="d-flex align-items-center mb-3 text-decoration-none text-dark logo-link"
-            >
-              <img
-                src="assets/img/logo.png"
-                alt="B&M Logo"
-                title="Back to Home"
-                style="width: 80px; height: auto"
-                class="me-3"
-              />
-              <div class="fw-bold lh-sm" style="font-size: 18px">
-                BRYAN &<br />MARCELINA<br />CAROLINA
-              </div>
-            </a>
-
-            <!-- Quote -->
-            <blockquote class="fs-5 mb-3">
-              <p class="mb-1">
-                <strong
-                  >THIS IS NOT JUST AN OBJECT, BUT A STORY OF LOVE.</strong
-                >
-              </p>
-              <small
-                ><em
-                  >CE N'EST PAS SEULEMENT UN OBJET, MAIS UNE HISTOIRE
-                  D'AMOUR.</em
-                ></small
-              >
-            </blockquote>
-
-            <!-- Title -->
-            <h1 class="fw-bold display-6 mb-2" style="line-height: 1.3">
-              PARIS IS NOT JUST A<br />
-              TRAVEL DESTINATION;<br />
-              IT IS A STORY AND A HOPE.
-            </h1>
-            <p class="fs-6">
-              <em
-                >PARIS N'EST PAS SEULEMENT UNE DESTINATION TOURISTIQUE; C'EST
-                UNE HISTOIRE ET UN ESPOIR.</em
-              >
-            </p>
-
-            <!-- Buttons -->
-            <div class="d-flex gap-3 mt-4 flex-wrap">
-              <a href="#" class="btn btn-outline-dark px-4 fw-semibold">
-                <img
-                  src="https://flagcdn.com/fr.svg"
-                  width="20"
-                  class="me-2"
-                />CONTACT US
-              </a>
-              <a href="#" class="btn btn-outline-dark px-4 fw-semibold">
-                <img
-                  src="https://flagcdn.com/gb.svg"
-                  width="20"
-                  class="me-2"
-                />CONTACT US
-              </a>
+    class="position-relative overflow-hidden"
+    style="background: url('assets/img/bg.jpg') no-repeat center center; background-size: cover;"
+  >
+    <!-- Gradasi dari atas ke bawah (untuk gambar) -->
+    <div class="position-absolute top-0 start-0 w-100" style="height: 40%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0)); z-index: 1;"></div>
+  
+    <div class="container py-5 position-relative" style="z-index: 2">
+      <div class="row align-items-center">
+  
+        <!-- Left: Logo + Text -->
+        <div class="col-12 col-lg-6 text-lg-start position-relative" style="z-index: 2; padding-top: 5rem;">
+          <a href="#" class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3 text-decoration-none" style="color: black;">
+            <img src="assets/img/logo.png" alt="B&M Logo" title="Back to Home" style="width: 80px; height: auto" class="me-3" />
+            <div class="fw-bold lh-sm" style="font-size: 18px; color: black;">
+              BRYAN &<br />MARCELINA<br />CAROLINA
             </div>
+          </a>
+  
+          <blockquote class="fs-5 mb-3 fst-italic" style="color: black;">
+            <p class="mb-1"><strong>THIS IS NOT JUST AN OBJECT, BUT A STORY OF LOVE.</strong></p>
+            <small>CE N'EST PAS SEULEMENT UN OBJET, MAIS UNE HISTOIRE D'AMOUR.</small>
+          </blockquote>
+  
+          <h1 class="fw-bold display-5 mb-3" style="line-height: 1.3; color: black;">
+            PARIS IS NOT JUST A<br />
+            TRAVEL DESTINATION;<br />
+            IT IS A STORY AND A HOPE.
+          </h1>
+          <p class="fs-6 fst-italic" style="color: black;">PARIS N'EST PAS SEULEMENT UNE DESTINATION TOURISTIQUE; C'EST UNE HISTOIRE ET UN ESPOIR.</p>
+  
+          <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mt-4">
+            <!-- Tombol pertama: Kontak dalam bahasa Prancis -->
+            <a href="#" class="btn btn-light px-4 fw-semibold shadow-sm border border-dark">
+              <img src="https://flagcdn.com/fr.svg" width="20" class="me-2" />CONTACTEZ-NOUS
+            </a>
+            <!-- Tombol kedua: Kontak dalam bahasa Inggris -->
+            <a href="#" class="btn btn-light px-4 fw-semibold shadow-sm border border-dark">
+              <img src="https://flagcdn.com/gb.svg" width="20" class="me-2" />CONTACT US
+            </a>
           </div>
-
-          <!-- Right: Image -->
-          <div class="col-lg-6 position-relative">
-            <img
-              src="assets/img/header-section.png"
-              class="img-fluid w-100 h-100 mx-auto"
-              style="max-height: 600px; object-fit: fill"
-              alt="Model Shirt"
-              title="Paris Collection Model"
-            />
-            <div class="position-absolute top-0 end-0 me-3 mt-3">
-              <svg
-                width="24"
-                height="60"
-                viewBox="0 0 24 60"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect x="10" width="4" height="60" rx="2" fill="red" />
+        </div>
+  
+        <!-- Right: Image -->
+        <div class="col-12 col-lg-6 text-center text-lg-end">
+          <div class="position-relative d-inline-block animate__animated animate__fadeInRight">
+            <img src="assets/img/header-section.png" class="img-fluid rounded shadow-lg header-image" alt="Model Shirt" title="Paris Collection Model" />
+            <!-- Garis Merah -->
+            <div class="position-absolute top-0 end-0 me-2 mt-2">
+              <svg width="24" height="60" viewBox="0 0 24 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" width="4" height="60" rx="2" fill="#F44336"/>
               </svg>
             </div>
           </div>
         </div>
+  
       </div>
-    </header>
+    </div>
+  </header>
+  <section class="ready-for-story text-center py-5 position-relative overflow-hidden" style="background-color: #d6d6d6;">
+
+    <!-- Efek gradasi blur hitam ke putih atas -->
+    <div style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to bottom, white, rgba(50, 50, 50, 0));
+      z-index: 1;
+      pointer-events: none;">
+    </div>
+  
+    <!-- Efek gradasi blur hitam ke putih bawah -->
+    <div style="
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 150px;
+      background: linear-gradient(to top, white, rgba(171, 171, 171, 0));
+      z-index: 1;
+      pointer-events: none;">
+    </div>
+  
+    <!-- Divider + konten -->
+    <div style="position: relative; z-index: 2;">
+      <hr style="border: 0; 
+                 border-top: 5px solid transparent; 
+                 width: 50%; 
+                 margin: 1.5rem auto; 
+                 border-radius: 25px; 
+                 background: linear-gradient(90deg, #9c27b0, #e91e63, #000000); 
+                 box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15); 
+                 animation: glowEffect 3s ease-in-out infinite alternate;">
+  
+      <p style="font-family: 'Georgia', serif; font-size: 1.3rem; color: #727272;">
+        "Your Story Starts Now—Where Will You Go First?" 
+      </p>
+    </div>
+  </section>
+  
+  <style>
+  @keyframes glowEffect {
+    0% {
+      background: linear-gradient(90deg, #9c27b0, #e91e63, #000000);
+    }
+    50% {
+      background: linear-gradient(90deg, #e91e63, #9c27b0, #e91e63);
+    }
+    100% {
+      background: linear-gradient(90deg, #9c27b0, #e91e63, #000000);
+    }
+  }
+  </style>
+    
+  
 
 <div id="story">
       <!-- Section 2: Story 1 -->
@@ -469,41 +486,69 @@
     </section>
 </div>
 
-  
-    <!-- Order Now Section with Promo Banner -->
-    <section
-      class="order-now-section bg-dark text-white text-center py-5 position-relative overflow-hidden"
-    >
-      <div class="container">
-        <h2 class="fw-bold mb-4 promo-heading" style="font-size: 38px">
-          Ready to Place Your Order?
-        </h2>
-        <p class="mb-4" style="font-size: 20px">
-          Choose your favorite items and get them delivered right to your door!
-        </p>
+<section
+class="order-now-section text-white text-center py-5 position-relative overflow-hidden"
+style="background: linear-gradient(180deg, #1c1c1c, #2e2e2e);"
+>
+<div class="container px-3">
+  <h2 class="fw-bold mb-3 promo-heading" style="font-size: 2rem;">
+    Ready to Place Your Order?
+  </h2>
+  <p class="mb-4" style="font-size: 1rem;">
+    Choose your favorite items and get them delivered right to your door!
+  </p>
 
-        <!-- Promo Badge -->
-        <div class="promo-badge mb-4">
-          <span class="badge bg-danger p-3 fs-4"
-            >🔥 Special Promo: Free Shipping This Month! 🔥</span
-          >
-        </div>
+  <!-- Promo Badge -->
+  <div class="promo-badge mb-4">
+    <span class="badge bg-danger px-4 py-2 fs-6 shadow-sm d-inline-block w-100 w-sm-75 w-md-auto rounded-pill animate__animated animate__pulse animate__infinite">
+      🔥 Special Promo: Free Shipping This Month! 🔥
+    </span>
+  </div>
 
-        <!-- Order Button -->
-        <a
-          href="order.html"
-          class="btn btn-warning btn-lg px-5 py-3 rounded-pill order-btn"
-        >
-          Order Now
-        </a>
-      </div>
+  <!-- Order Button -->
+  <a
+    href="order.html"
+    class="btn btn-warning btn-lg px-4 py-3 rounded-pill order-btn w-100 w-sm-75 w-md-auto shadow-lg"
+    style="transition: all 0.3s ease;"
+    onmouseover="this.style.transform='scale(1.05)'"
+    onmouseout="this.style.transform='scale(1)'"
+  >
+    Order Now
+  </a>
+</div>
 
-      <!-- Confetti Animation -->
-      <div class="confetti"></div>
+<!-- Confetti Animation -->
+<div class="confetti"></div>
 
-      <!-- Star Effect for Background -->
-      <div class="stars"></div>
-    </section>
+<!-- Star Effect for Background -->
+<div class="stars"></div>
+</section>
+
+<!-- Animasi dari Animate.css (pastikan include lib-nya) -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+
+<style>
+@media (max-width: 576px) {
+.promo-heading {
+  font-size: 1.5rem !important;
+}
+
+.promo-badge .badge {
+  font-size: 0.95rem !important;
+  padding: 0.6rem 1rem !important;
+}
+
+.order-btn {
+  font-size: 0.95rem !important;
+  padding: 0.75rem 1.5rem !important;
+}
+}
+</style>
+
+
 
     <!-- Footer -->
     <footer class="text-light pt-5 pb-4" id="contact" style="background-color: #1a1a1a">
