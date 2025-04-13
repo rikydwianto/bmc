@@ -85,6 +85,7 @@ h5 {
   object-fit: cover;
   width: 100%;
   height: auto;
+  margin-bottom: 10px;
 }
 
 .subsection-title {
