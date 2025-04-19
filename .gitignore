@@ -1,0 +1,5 @@
+# Ignore actual config
+core/koneksi/db.php
+
+# Keep example files
+!core/koneksi/db.example.php
