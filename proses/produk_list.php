@@ -20,7 +20,7 @@ $query = "SELECT
         JOIN 
             categories c ON p.category_id = c.id
         JOIN 
-            product_images PI ON p.id = pi.product_id AND pi.is_primary = 1
+            product_images pi ON p.id = pi.product_id AND pi.is_primary = 1
         JOIN 
             product_variants pv ON p.id = pv.product_id AND pv.stock > 0
         GROUP BY 
