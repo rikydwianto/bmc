@@ -24,7 +24,14 @@
           max-width: 100%;
           height: auto;
       }
-
+      .navbar-nav .nav-link:hover {
+        color: #007bff;  /* Ganti dengan warna sesuai desain */
+    }
+    
+    .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+    
 .custom-divider {
   margin-top: -1px;
   line-height: 0;
@@ -71,7 +78,7 @@ h5 {
 
 
 .story-section {
-  background-color: rgba(255, 255, 255, 0.70);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 60px 20px;
   color: #000;
   height: auto;
@@ -138,6 +145,21 @@ h5 {
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.3); opacity: 0.7; }
+}
+@media (max-width: 576px) {
+  .promo-heading {
+      font-size: 1.5rem !important;
+  }
+
+  .promo-badge .badge {
+      font-size: 0.95rem !important;
+      padding: 0.6rem 1rem !important;
+  }
+
+  .order-btn {
+      font-size: 0.95rem !important;
+      padding: 0.75rem 1.5rem !important;
+  }
 }
 
 a.logo-link:hover {
@@ -311,5 +333,171 @@ footer .logo-link img {
 @media (max-width: 768px) {
   .header-image {
     max-height: 300px;
+  }
+}
+/* Animasi masuk */
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.frame-wrapper {
+  animation: slideDownFade 1s ease-out;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  opacity: 0;
+}
+
+.fade-in-down.appear {
+  animation: fadeInDown 1s ease-out forwards;
+}
+@keyframes glowEffect {
+  0% {
+      background: linear-gradient(90deg, #9c27b0, #e91e63, #000000);
+  }
+
+  50% {
+      background: linear-gradient(90deg, #e91e63, #9c27b0, #e91e63);
+  }
+
+  100% {
+      background: linear-gradient(90deg, #9c27b0, #e91e63, #000000);
+  }
+}
+
+@media (max-width: 576px) {
+  .card-img-top + .position-absolute img {
+      height: 32px !important;
+  }
+}
+.hover-shadow-sm:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.cart-floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gaya untuk floating cart button */
+.cart-floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: #343a40;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.cart-floating-btn:hover {
+  background-color: #007bff;
+}
+
+/* Gaya untuk setiap item dalam keranjang */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px; /* Mengurangi padding atas/bawah */
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px; /* Mengurangi jarak antar item */
+}
+
+/* Gaya untuk gambar produk */
+.cart-item-image {
+  max-width: 40px;  /* Ukuran gambar yang lebih kecil */
+  max-height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Gaya untuk detail produk */
+.cart-item-details {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+/* Gaya untuk nama item produk */
+.cart-item-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;  /* Mengurangi jarak bawah */
+}
+
+/* Gaya untuk informasi ukuran, jumlah, dan harga */
+.cart-item-size,
+.cart-item-quantity,
+.cart-item-price {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 3px;  /* Mengurangi jarak antar elemen */
+}
+
+/* Gaya untuk tombol hapus */
+.cart-item-remove button {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media (max-width: 768px) {
+  .cart-item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .cart-item-image {
+      max-width: 50px;
+      max-height: 50px;
+  }
+
+  .cart-item-details {
+      margin-left: 0;
   }
 }

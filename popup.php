@@ -1,0 +1,9 @@
+<?php 
+include("core/loader.php");
+if(isset($_GET['menu'])){
+    $menu=$_GET['menu'];
+    if($menu=='addcart'){
+        include_once("proses/addcart.php");
+    }
+}
+?>
