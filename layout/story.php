@@ -81,7 +81,7 @@
                             <b> Paris on Earth—Paris on this earth, a true miracle.</b>
                         </p>
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
+                            <a href="produk.php?story=1" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
                         </div>
                     </div>
                 </div>
@@ -174,7 +174,7 @@
                             to see again.
                         </p>
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
+                            <a href="produk.php?story=2" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
                         </div>
                     </div>
                 </div>
@@ -259,7 +259,7 @@
                             dreams.
                         </p>
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
+                            <a href="produk.php?story=3" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
                         </div>
                     </div>
                 </div>
@@ -344,7 +344,7 @@
                             And you, if you were here, what would you do on the Seine?
                         </p>
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
+                            <a href="produk.php?story=4" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
                         </div>
                     </div>
                 </div>
@@ -439,7 +439,7 @@
                             rewritten, through the passage of time.
                         </p>
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
+                            <a href="produk.php?story=5" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
                         </div>
                     </div>
                 </div>
@@ -525,7 +525,7 @@
                             find its way back home.
                         </p>
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
+                            <a href="produk.php?story=6" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
                         </div>
                     </div>
                 </div>
@@ -619,7 +619,7 @@
                             away without dancing in the rain, laughing without reason, and loving without restraint.
                         </p>
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
+                            <a href="produk.php?story=6" class="btn btn-outline-primary px-4 py-2">Explore the Collection</a>
                         </div>
                     </div>
                 </div>
@@ -693,7 +693,7 @@
                         </p>
 
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-light px-4 py-2">Discover More</a>
+                            <a href="produk.php?story=7" class="btn btn-outline-light px-4 py-2">Discover More</a>
                         </div>
                     </div>
 
@@ -741,7 +741,7 @@
                         </p>
 
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-light px-4 py-2">Explore the Collection</a>
+                            <a href="produk.php?story=8" class="btn btn-outline-light px-4 py-2">Explore the Collection</a>
                         </div>
                     </div>
 
@@ -818,7 +818,7 @@
                         </p>
 
                         <div class="mt-4 text-center text-md-start">
-                            <a href="produk.html" class="btn btn-outline-light px-4 py-2"
+                            <a href="produk.php?story=9" class="btn btn-outline-light px-4 py-2"
                                 style="border-radius: 50px; transition: all 0.3s ease;">
                                 Explore the Collection
                             </a>

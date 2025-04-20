@@ -1,14 +1,20 @@
-  const navbar = document.getElementById('scrollNavbar');
+  // const navbar = document.getElementById('scrollNavbar');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.style.display = 'block';
-      navbar.classList.add('fade-in');
-    } else {
-      navbar.style.display = 'none';
-      navbar.classList.remove('fade-in');
+  // window.addEventListener('scroll', () => {
+  //   if (window.scrollY > 50) {
+  //     navbar.style.display = 'block';
+  //     navbar.classList.add('fade-in');
+  //   } else {
+  //     navbar.style.display = 'none';
+  //     navbar.classList.remove('fade-in');
+  //   }
+  // });
+      // Membuat navbar muncul langsung tanpa menunggu scroll
+      window.onload = function() {
+        var navbar = document.getElementById('scrollNavbar');
+        navbar.style.display = 'block'; // Menampilkan navbar saat halaman dimuat
     }
-  });
+
 
 
   document.addEventListener("DOMContentLoaded", function () {

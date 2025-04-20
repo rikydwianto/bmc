@@ -5,7 +5,7 @@ include("core/loader.php");
 <html lang="en">
 
 <head>
-<?php
+    <?php
     include_once("layout/page_head_script.php");
     ?>
 </head>
@@ -40,68 +40,82 @@ include("core/loader.php");
         </div>
     </section>
     <section class="container my-5">
-  <h2 class="mb-4">Checkout</h2>
-  <form id="checkoutForm">
-    <div class="row">
-      <!-- Info Pengiriman -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm p-4">
-          <h5 class="mb-3">Shipping Information</h5>
-          <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-control" name="name" >
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Phone Number</label>
-            <input type="text" class="form-control" name="phone" >
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" >
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Address</label>
-            <textarea class="form-control" name="address" rows="4" ></textarea>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Note (Optional)</label>
-            <textarea class="form-control" name="note" rows="2"></textarea>
-          </div>
-        </div>
-      </div>
-
-      <!-- Ringkasan Order + Pembayaran -->
-      <div class="col-md-6 mb-4">
-        <div class="card shadow-sm p-4">
-          <h5 class="mb-3">Order Summary</h5>
-          <div id="orderSummary">
-            <!-- Akan diisi lewat JS -->
-            <p class="text-muted">Loading cart...</p>
-          </div>
-          <hr>
-          <div class="mb-3">
-            <label class="form-label">Payment Method</label>
-            <select class="form-select" name="payment_method" id="paymentMethod" >
-  <option value="">-- Select --</option>
-  <?php foreach ($paymentMethods as $key => $method): ?>
-    <option value="<?= htmlspecialchars($key) ?>"><?= htmlspecialchars($method['bank_name']) ?> - <?= htmlspecialchars($method['account_number']) ?> - <?= htmlspecialchars($method['account_name']) ?></option>
-  <?php endforeach; ?>
-</select>
-          </div>
-          <button type="submit" class="btn btn-primary w-100 mt-3">Place Order</button>
-        </div>
-      </div>
+        <h2 class="mb-4">Checkout</h2>
+        <form id="checkoutForm">
+            <div class="row">
+                <!-- Info Pengiriman -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm p-4">
+                        <h5 class="mb-3">Shipping Information</h5>
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" name="name">
+                        </div>
+                        <div class="mb-3">
+    <label class="form-label">Phone Number</label>
+    <div class="input-group">
+        <select class="form-select" name="country_code" style="max-width: 100px;">
+            <?php foreach ($countryCodes as $country): ?>
+                <option value="<?= htmlspecialchars($country['code']) ?>">
+                    <?= htmlspecialchars($country['code']) ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <input type="text" class="form-control" name="phone" placeholder="e.g. 1234567890">
     </div>
-  </form>
-</section>
-
-<?php include_once("layout/order-now.php") ?>
+</div>
 
 
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <textarea class="form-control" name="address" rows="4"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Note (Optional)</label>
+                            <textarea class="form-control" name="note" rows="2"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ringkasan Order + Pembayaran -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm p-4">
+                        <h5 class="mb-3">Order Summary</h5>
+                        <div id="orderSummary">
+                            <!-- Akan diisi lewat JS -->
+                            <p class="text-muted">Loading cart...</p>
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <label class="form-label">Payment Method</label>
+                            <select class="form-select" name="payment_method" id="paymentMethod">
+                                <option value="">-- Select --</option>
+                                <?php foreach ($paymentMethods as $key => $method): ?>
+                                <option value="<?= htmlspecialchars($key) ?>">
+                                    <?= htmlspecialchars($method['bank_name']) ?> -
+                                    <?= htmlspecialchars($method['account_number']) ?> -
+                                    <?= htmlspecialchars($method['account_name']) ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mt-3">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <?php include_once("layout/order-now.php") ?>
 
 
-   <?php include_once("layout/footer.php") ?>
-   <?php include_once("layout/footer_script.php") ?>
+
+
+    <?php include_once("layout/footer.php") ?>
+    <?php include_once("layout/footer_script.php") ?>
 
 </body>
 

@@ -31,7 +31,9 @@ if(isset($_GET['menu'])){
         $address = $_POST['address'] ?? '';
         $phone = $_POST['phone'] ?? '';
         $payment = $_POST['payment_method'] ?? '';
-    
+        $country_code = $_POST['country_code'] ?? '';
+$email = $_POST['email']??'';
+        $phone = $country_code.' '. $phone;
         if (!$name || !$address || !$phone || !$payment) {
             echo json_encode(['success' => false, 'message' => 'Incomplete form']);
             exit;
@@ -60,8 +62,8 @@ if(isset($_GET['menu'])){
         $orderNumber = 'INV' . date('Ymd') . rand(1000, 9999);
     
         // Simpan ke tabel orders
-        $stmt = $pdo->prepare("INSERT INTO orders (user_id, session_id, order_number, total, name, phone, address, payment_method, created_at)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW())");
+        $stmt = $pdo->prepare("INSERT INTO orders (user_id, session_id, order_number, total, name, phone, address, payment_method, created_at,email)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(),?)");
         $stmt->execute([
             $userId,
             $sessionId,
@@ -70,7 +72,8 @@ if(isset($_GET['menu'])){
             $name,
             $phone,
             $address,
-            $payment
+            $payment,
+            $email
         ]);
         $orderId = $pdo->lastInsertId();
     

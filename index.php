@@ -32,7 +32,7 @@ include("core/loader.php");
             <div class="row align-items-center">
                 <!-- Left: Logo + Text -->
                 <div class="col-12 col-lg-6 text-lg-start position-relative" style="z-index: 2; padding-top: 5rem">
-                    <a href="#"
+                    <!-- <a href="#"
                         class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3 text-decoration-none"
                         style="color: black">
                         <img src="assets/img/logo.png" alt="B&M Logo" title="Back to Home"
@@ -40,7 +40,7 @@ include("core/loader.php");
                         <div class="fw-bold lh-sm" style="font-size: 18px; color: black">
                             BRYAN &<br />MARCELINA<br />CAROLINA
                         </div>
-                    </a>
+                    </a> -->
 
                     <blockquote class="fs-5 mb-3 fst-italic" style="color: black">
                         <p class="mb-1">
@@ -59,17 +59,30 @@ include("core/loader.php");
                         PARIS N'EST PAS SEULEMENT UNE DESTINATION TOURISTIQUE; C'EST UNE
                         HISTOIRE ET UN ESPOIR.
                     </p>
+                    <small class="d-block mt-3">
+    <div class="mb-2">
+        <i class="bi bi-stars text-warning me-1"></i>
+        <strong class="text-light">We accept custom orders.</strong><br>
+        <span class="text-secondary">Please contact our admin via WhatsApp.</span>
+    </div>
+    <div>
+        <i class="bi bi-stars text-warning me-1"></i>
+        <strong class="text-light">Nous acceptons les commandes personnalisées.</strong><br>
+        <span class="text-secondary">Veuillez contacter notre admin via WhatsApp.</span>
+    </div>
+</small>
 
-                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mt-4">
-                        <!-- Tombol pertama: Kontak dalam bahasa Prancis -->
-                        <a href="#contact" class="btn btn-light px-4 fw-semibold shadow-sm border border-dark">
-                            <img src="https://flagcdn.com/fr.svg" width="20" class="me-2" />CONTACTEZ-NOUS
-                        </a>
-                        <!-- Tombol kedua: Kontak dalam bahasa Inggris -->
-                        <a href="#contact" class="btn btn-light px-4 fw-semibold shadow-sm border border-dark">
-                            <img src="https://flagcdn.com/gb.svg" width="20" class="me-2" />CONTACT US
-                        </a>
-                    </div>
+<div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3 mt-4">
+    <!-- Tombol bahasa Prancis -->
+    <a href="#contact" class="btn btn-light px-4 fw-semibold shadow-sm border border-dark">
+        <img src="https://flagcdn.com/fr.svg" width="20" class="me-2" alt="FR" />CONTACTEZ-NOUS
+    </a>
+    <!-- Tombol bahasa Inggris -->
+    <a href="#contact" class="btn btn-light px-4 fw-semibold shadow-sm border border-dark">
+        <img src="https://flagcdn.com/gb.svg" width="20" class="me-2" alt="EN" />CONTACT US
+    </a>
+</div>
+
                 </div>
 
                 <!-- Right: Image -->
@@ -220,8 +233,8 @@ include("core/loader.php");
 
 
 
-   <?php include_once("layout/footer.php") ?>
-   <?php include_once("layout/footer_script.php") ?>
+    <?php include_once("layout/footer.php") ?>
+    <?php include_once("layout/footer_script.php") ?>
 
 </body>
 

@@ -2,36 +2,39 @@
   box-sizing: border-box;
   border: 1px solid red; 
 } */
-        /* Pastikan seluruh body dan elemen lainnya mengisi layar */
-        body, html {
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          height: 100%;
-      }
+/* Pastikan seluruh body dan elemen lainnya mengisi layar */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
 
-      .container-fluid {
-          width: 100%;
-          padding: 0;
-      }
+.container-fluid {
+  width: 100%;
+  padding: 0;
+}
 
-      .row {
-          width: 100%;
-      }
+.row {
+  width: 100%;
+}
 
-      /* Pastikan gambar dan elemen lainnya responsif */
-      img {
-          max-width: 100%;
-          height: auto;
-      }
-      .navbar-nav .nav-link:hover {
-        color: #007bff;  /* Ganti dengan warna sesuai desain */
-    }
-    
-    .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    
+/* Pastikan gambar dan elemen lainnya responsif */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+  /* Ganti dengan warna sesuai desain */
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
 .custom-divider {
   margin-top: -1px;
   line-height: 0;
@@ -50,8 +53,8 @@ body {
   color: #111;
   margin: 0;
   overflow-x: hidden;
-    scroll-behavior: smooth;
-width: 100%;
+  scroll-behavior: smooth;
+  width: 100%;
 
 }
 
@@ -71,6 +74,7 @@ h5 {
   font-weight: 600;
   text-transform: uppercase;
 }
+
 /* Hapus padding bawaan container */
 .container-fluid {
   padding: 0 !important;
@@ -101,6 +105,7 @@ h5 {
   margin-bottom: 1rem;
   /* padding-left: 5px; */
 }
+
 .logo-container {
   display: flex;
   align-items: center;
@@ -143,22 +148,32 @@ h5 {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.3); opacity: 0.7; }
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
 }
+
 @media (max-width: 576px) {
   .promo-heading {
-      font-size: 1.5rem !important;
+    font-size: 1.5rem !important;
   }
 
   .promo-badge .badge {
-      font-size: 0.95rem !important;
-      padding: 0.6rem 1rem !important;
+    font-size: 0.95rem !important;
+    padding: 0.6rem 1rem !important;
   }
 
   .order-btn {
-      font-size: 0.95rem !important;
-      padding: 0.75rem 1.5rem !important;
+    font-size: 0.95rem !important;
+    padding: 0.75rem 1.5rem !important;
   }
 }
 
@@ -188,8 +203,10 @@ a.logo-link:hover {
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
+
 .story-section p {
-  font-size: 0.80rem; /* atau 15px, sesuaikan dengan selera */
+  font-size: 0.80rem;
+  /* atau 15px, sesuaikan dengan selera */
   line-height: 1.7;
   text-align: justify;
   text-justify: inter-word;
@@ -203,10 +220,12 @@ a.logo-link:hover {
   font-weight: 600;
   padding-left: 8px;
 }
+
 .story-text {
   font-size: 0.95rem;
   line-height: 1.7;
 }
+
 #story1 {
   position: relative;
   overflow: hidden;
@@ -216,7 +235,8 @@ a.logo-link:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.7); /* nilai bisa kamu ubah untuk tingkat kehalusan */
+  background: rgba(255, 255, 255, 0.7);
+  /* nilai bisa kamu ubah untuk tingkat kehalusan */
   z-index: 1;
 }
 
@@ -224,13 +244,15 @@ a.logo-link:hover {
   position: relative;
   z-index: 2;
 }
+
 .order-btn {
   position: relative;
   animation: bounce 1.5s infinite ease-in-out;
   background: linear-gradient(45deg, #ff9900, #ffcc00);
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 10; /* Set z-index to ensure the button is on top */
+  z-index: 10;
+  /* Set z-index to ensure the button is on top */
 }
 
 .order-btn:hover {
@@ -246,7 +268,8 @@ a.logo-link:hover {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 2; /* Make sure confetti is behind the button */
+  z-index: 2;
+  /* Make sure confetti is behind the button */
   opacity: 0.7;
   animation: confetti 2s infinite;
 }
@@ -257,19 +280,23 @@ a.logo-link:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1; /* Make sure the graphics are behind the button */
+  z-index: 1;
+  /* Make sure the graphics are behind the button */
 }
 
 .promo-icon {
   width: 100px;
   height: auto;
   animation: rotateIcon 5s infinite linear;
-  z-index: 1; /* Ensure icon is behind the button */
+  z-index: 1;
+  /* Ensure icon is behind the button */
 }
+
 /* Hapus margin bottom gambar di bawah */
 img {
   margin-bottom: 0;
 }
+
 @media (max-width: 768px) {
   h1.display-6 {
     font-size: 1.8rem;
@@ -280,9 +307,12 @@ img {
 /* Pastikan elemen mencakup 100% lebar */
 .order-now-section,
 footer {
-  width: 100%; /* Memastikan bagian ini mencakup 100% layar */
-  padding: 0; /* Menghapus padding yang tidak diinginkan */
-  margin: 0;  /* Menghapus margin yang tidak diinginkan */
+  width: 100%;
+  /* Memastikan bagian ini mencakup 100% layar */
+  padding: 0;
+  /* Menghapus padding yang tidak diinginkan */
+  margin: 0;
+  /* Menghapus margin yang tidak diinginkan */
 }
 
 /* Menggunakan container-fluid agar tidak terbatasi oleh lebar container */
@@ -290,7 +320,8 @@ footer {
 footer .container {
   width: 100%;
   max-width: 100%;
-  padding: 0; /* Menghapus padding dalam container */
+  padding: 0;
+  /* Menghapus padding dalam container */
 }
 
 /* Agar tombol dan badge tetap dalam batas yang diinginkan */
@@ -307,7 +338,8 @@ footer {
 }
 
 footer .container {
-  max-width: 100%; /* Memastikan container footer mengisi lebar layar */
+  max-width: 100%;
+  /* Memastikan container footer mengisi lebar layar */
 }
 
 /* Pastikan logo footer tidak terpotong */
@@ -322,9 +354,17 @@ footer .logo-link img {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; top: -20px; }
-  to { opacity: 1; top: 0; }
+  from {
+    opacity: 0;
+    top: -20px;
+  }
+
+  to {
+    opacity: 1;
+    top: 0;
+  }
 }
+
 .header-image {
   max-height: 560px;
   object-fit: contain;
@@ -335,12 +375,14 @@ footer .logo-link img {
     max-height: 300px;
   }
 }
+
 /* Animasi masuk */
 @keyframes slideDownFade {
   0% {
     transform: translateY(-40px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -352,10 +394,13 @@ footer .logo-link img {
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.5);
     opacity: 0.6;
@@ -368,6 +413,7 @@ footer .logo-link img {
     opacity: 0;
     transform: translateY(-40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -381,28 +427,30 @@ footer .logo-link img {
 .fade-in-down.appear {
   animation: fadeInDown 1s ease-out forwards;
 }
+
 @keyframes glowEffect {
   0% {
-      background: linear-gradient(90deg, #9c27b0, #e91e63, #000000);
+    background: linear-gradient(90deg, #9c27b0, #e91e63, #000000);
   }
 
   50% {
-      background: linear-gradient(90deg, #e91e63, #9c27b0, #e91e63);
+    background: linear-gradient(90deg, #e91e63, #9c27b0, #e91e63);
   }
 
   100% {
-      background: linear-gradient(90deg, #9c27b0, #e91e63, #000000);
+    background: linear-gradient(90deg, #9c27b0, #e91e63, #000000);
   }
 }
 
 @media (max-width: 576px) {
-  .card-img-top + .position-absolute img {
-      height: 32px !important;
+  .card-img-top+.position-absolute img {
+    height: 32px !important;
   }
 }
+
 .hover-shadow-sm:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .cart-floating-btn {
@@ -440,16 +488,19 @@ footer .logo-link img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 12px; /* Mengurangi padding atas/bawah */
+  padding: 8px 12px;
+  /* Mengurangi padding atas/bawah */
   background-color: #f8f9fa;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px; /* Mengurangi jarak antar item */
+  margin-bottom: 10px;
+  /* Mengurangi jarak antar item */
 }
 
 /* Gaya untuk gambar produk */
 .cart-item-image {
-  max-width: 40px;  /* Ukuran gambar yang lebih kecil */
+  max-width: 40px;
+  /* Ukuran gambar yang lebih kecil */
   max-height: 40px;
   object-fit: cover;
   border-radius: 8px;
@@ -466,7 +517,8 @@ footer .logo-link img {
   font-size: 1.1rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 4px;  /* Mengurangi jarak bawah */
+  margin-bottom: 4px;
+  /* Mengurangi jarak bawah */
 }
 
 /* Gaya untuk informasi ukuran, jumlah, dan harga */
@@ -475,7 +527,8 @@ footer .logo-link img {
 .cart-item-price {
   font-size: 0.9rem;
   color: #555;
-  margin-bottom: 3px;  /* Mengurangi jarak antar elemen */
+  margin-bottom: 3px;
+  /* Mengurangi jarak antar elemen */
 }
 
 /* Gaya untuk tombol hapus */
@@ -488,16 +541,16 @@ footer .logo-link img {
 /* Responsif untuk ukuran layar lebih kecil */
 @media (max-width: 768px) {
   .cart-item {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .cart-item-image {
-      max-width: 50px;
-      max-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
   }
 
   .cart-item-details {
-      margin-left: 0;
+    margin-left: 0;
   }
 }

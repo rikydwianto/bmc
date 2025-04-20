@@ -24,7 +24,7 @@
 
                 <!-- Submenu Dropdown untuk Story -->
                 <li class="nav-item">
-                    <a class="nav-link " href="#story" >
+                    <a class="nav-link " href="index.php#story" >
                         Story
                     </a>
                     
@@ -32,6 +32,9 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="produk.php" style="color: #333;">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="confirm_payment.php" style="color: #333;">Confirm Payment</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="tracking.php" style="color: #333;">Tracking</a>

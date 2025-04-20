@@ -3,6 +3,11 @@ $addLimit = "";
 if($limit_produk){
     $addLimit=' LIMIT 15';
 }
+$addWhere = '';
+if(isset($_GET['story'])){
+$story_id = $_GET['story'];
+$addWhere = " AND p.story='$story_id'";
+}
 $query = "SELECT 
             p.id AS product_id,
             p.name AS product_name,
@@ -23,6 +28,7 @@ $query = "SELECT
             product_images pi ON p.id = pi.product_id AND pi.is_primary = 1
         JOIN 
             product_variants pv ON p.id = pv.product_id AND pv.stock > 0
+            WHERE 1=1  $addWhere
         GROUP BY 
             p.id
         ORDER BY 
