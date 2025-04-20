@@ -77,7 +77,7 @@ $size_guide = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <th>Price (€)</th>
                     <th>USD</th>
                     <th>AUD</th>
-                    <th>Stock</th>
+                    <!-- <th>Stock</th> -->
                     <th>Quantity</th>
                 </tr>
             </thead>
@@ -123,7 +123,7 @@ $size_guide = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             $<?= number_format($aud_price, 2, '.', ',') ?>
                         <?php endif; ?>
                     </td>
-                    <td><?= $variant['stock'] ?></td>
+                    <!-- <td><?= $variant['stock'] ?></td> -->
                     <td>
                         <div class="input-group input-group-sm justify-content-center">
                             <button type="button" class="btn btn-outline-secondary"
@@ -143,6 +143,9 @@ $size_guide = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div class="text-end mt-3">
+        <a  href="checkout.php" onclick="simpanCart()" class="btn btn-dark">
+            <i class="bi bi-cart-plus me-2"></i> Checkout
+        </a>
         <button type="button" id="addToCartBtn" onclick="simpanCart()" class="btn btn-dark">
             <i class="bi bi-cart-plus me-2"></i> Add to Cart
         </button>
