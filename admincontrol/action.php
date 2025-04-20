@@ -9,6 +9,8 @@ if(isset($_GET['menu'])){
         if ($id && in_array($status, ['approved', 'rejected'])) {
             if ($status === 'approved') {
                 $stmt = $pdo->prepare("UPDATE orders SET paid_status = ?, is_paid = 1 WHERE id = ?");
+                addOrderStatus($orderId, 'Payment Received', 'Payment has been Approved. We will process your order soon.');
+
             } else {
                 $stmt = $pdo->prepare("UPDATE orders SET paid_status = ?, is_paid = 0 WHERE id = ?");
             }
