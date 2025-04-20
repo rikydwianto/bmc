@@ -84,7 +84,7 @@ include("core/loader.php");
             <select class="form-select" name="payment_method" id="paymentMethod" >
   <option value="">-- Select --</option>
   <?php foreach ($paymentMethods as $key => $method): ?>
-    <option value="<?= htmlspecialchars($key) ?>"><?= htmlspecialchars($method['label']) ?></option>
+    <option value="<?= htmlspecialchars($key) ?>"><?= htmlspecialchars($method['bank_name']) ?> - <?= htmlspecialchars($method['account_number']) ?> - <?= htmlspecialchars($method['account_name']) ?></option>
   <?php endforeach; ?>
 </select>
           </div>

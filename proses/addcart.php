@@ -130,7 +130,7 @@ $size_guide = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 onclick="updateQty('qty_<?= $variant_id ?>', -1)">–</button>
                             <input type="number" class="form-control text-center"
                                 name="variants[<?= $variant_id ?>][quantity]" id="qty_<?= $variant_id ?>" value="0"
-                                min="0" max="<?= $variant['stock'] ?>" style="max-width: 60px;" readonly>
+                                min="0" max="<?= $variant['stock'] ?>" style="min-width: 20px;max-width: 60px;" readonly>
                             <button type="button" class="btn btn-outline-secondary"
                                 onclick="updateQty('qty_<?= $variant_id ?>', 1)">+</button>
                         </div>

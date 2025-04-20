@@ -30,21 +30,7 @@ $items = $stmt->fetchAll();
 // Cek status bayar
 $isPaid = $order['is_paid'] ?? 0;
 
-// Metode pembayaran
-$paymentMethods = [
-    'bank' => [
-        'label' => 'Bank Transfer - BCA',
-        'account_name' => 'Riky Pratama',
-        'account_number' => '1234567890',
-        'bank_name' => 'BCA'
-    ],
-    'ria' => [
-        'label' => 'Ria - Kirim melalui agen Ria terdekat. Nama penerima: Riky Pratama.'
-    ],
-    'swift' => [
-        'label' => 'Swift - Transfer internasional ke Bank Mandiri. SWIFT: BMRIIDJA.'
-    ]
-];
+
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +85,8 @@ $paymentMethods = [
                     if (isset($method['account_number'])) {
                         echo "Bank: <strong>{$method['bank_name']}</strong><br>";
                         echo "Account No: <strong>{$method['account_number']}</strong><br>";
-                        echo "Account Name: <strong>{$method['account_name']}</strong>";
+                        echo "Account Name: <strong>{$method['account_name']}</strong><br/>";
+                        echo "*<small>{$method['label']}</small>";
                     } else {
                         echo $method['label'];
                     }
