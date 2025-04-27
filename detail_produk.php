@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once("core/loader.php");
 
 $id = $_GET['id'] ?? null;
@@ -71,76 +71,77 @@ $size_guide = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     <!-- Layout Gambar Kiri, Deskripsi Kanan -->
     <div class="row mb-5 align-items-start">
-    <div class="col-md-6">
-    <div class="position-relative">
-        <!-- Badge di atas gambar -->
-        <div class="mb-3"
-             >
-            <?php if (!empty($product['is_recommended'])): ?>
-                <img src="assets/img/img/rekomendasi.png" alt="Recommended" style="height: 50px;">
-            <?php endif; ?>
-            <?php if (!empty($product['is_free_shipping'])): ?>
-                <img src="assets/img/img/free-shipping.png" alt="Free Shipping" style="height: 50px;">
-            <?php endif; ?>
-            <?php if (!empty($product['is_limited'])): ?>
-                <img src="assets/img/img/limited-edition.png" alt="Limited Edition" style="height: 50px;">
-            <?php endif; ?>
-        </div>
+        <div class="col-md-6">
+            <div class="position-relative">
+                <!-- Badge di atas gambar -->
+                <div class="mb-3">
+                    <?php if (!empty($product['is_recommended'])): ?>
+                        <img src="assets/img/img/rekomendasi.png" alt="Recommended" style="height: 50px;">
+                    <?php endif; ?>
+                    <?php if (!empty($product['is_free_shipping'])): ?>
+                        <img src="assets/img/img/free-shipping.png" alt="Free Shipping" style="height: 50px;">
+                    <?php endif; ?>
+                    <?php if (!empty($product['is_limited'])): ?>
+                        <img src="assets/img/img/limited-edition.png" alt="Limited Edition" style="height: 50px;">
+                    <?php endif; ?>
+                </div>
 
-        <!-- Galeri Gambar -->
-        <div class="d-flex flex-wrap gap-2">
-        <?php foreach ($images as $img): ?>
-            <a href="<?=$url?>assets/img/product/<?= $img['image'] ?>" data-fancybox="detail-gallery-<?= $product['id'] ?>">
-            <img src="<?=$url?>assets/img/product/<?= $img['image'] ?>" alt="Gambar Produk"
-             class="rounded shadow-sm"
-             style="height: 200px; width: auto; object-fit: cover; transition: transform .3s;"
-             onmouseover="this.style.transform='scale(1.05)'"
-             onmouseout="this.style.transform='scale(1)'">
-    </a>
-<?php endforeach; ?>
+                <!-- Galeri Gambar -->
+                <div class="d-flex flex-wrap gap-2">
+                    <?php foreach ($images as $img): ?>
+                        <a href="assets/img/product/<?= $img['image'] ?>"
+                            data-fancybox="detail-gallery-<?= $product['id'] ?>">
+                            <img src="assets/img/product/<?= $img['image'] ?>" alt="Gambar Produk" class="rounded shadow-sm"
+                                style="height: 200px; width: auto; object-fit: cover; transition: transform .3s;"
+                                onmouseover="this.style.transform='scale(1.05)'"
+                                onmouseout="this.style.transform='scale(1)'">
+                        </a>
+                    <?php endforeach; ?>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
         <div class="col-md-6" style="font-size: smaller;text-align: justify;">
             <p class="text-muted small"><?= nl2br(htmlspecialchars($product['description'])) ?></p>
-            <p class="small">Note :  <br> <hr> <?= nl2br(htmlspecialchars($product['note'])) ?></p>
+            <p class="small">Note : <br>
+                <hr> <?= nl2br(htmlspecialchars($product['note'])) ?>
+            </p>
         </div>
     </div>
 
     <!-- Layout Bawah: Harga & Panduan Ukuran Berdampingan -->
     <div class="row g-4">
-       
+
 
         <!-- Panduan Ukuran -->
         <?php if ($size_guide): ?>
-        <div class="col-md-4">
-            <h6 class="mb-2">Size Guide(cm):</h6>
-            <div class="table-responsive">
-                <table class="table table-sm table-bordered small text-center" style="font-size: small;">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Size</th>
-                            <th>Width</th>
-                            <th>Height</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($size_guide as $guide): ?>
-                        <tr>
-                            <td><?= htmlspecialchars($guide['size']) ?></td>
-                            <td><?= $guide['width'] ?></td>
-                            <td><?= $guide['height'] ?></td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+            <div class="col-md-4">
+                <h6 class="mb-2">Size Guide(cm):</h6>
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered small text-center" style="font-size: small;">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Size</th>
+                                <th>Width</th>
+                                <th>Height</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($size_guide as $guide): ?>
+                                <tr>
+                                    <td><?= htmlspecialchars($guide['size']) ?></td>
+                                    <td><?= $guide['width'] ?></td>
+                                    <td><?= $guide['height'] ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
         <?php endif; ?>
 
-         <!-- Harga per Ukuran -->
-         <div class="col-md-8">
+        <!-- Harga per Ukuran -->
+        <div class="col-md-8">
             <h6 class="mb-2">Price:</h6>
             <div class="table-responsive">
                 <table class="table table-sm table-bordered small text-center" style="font-size: small;">
@@ -153,48 +154,52 @@ $size_guide = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </tr>
                     </thead>
                     <tbody>
-    <?php foreach ($variants as $variant): ?>
-        <?php
-        $stock = $variant['stock'];
-        $tr='';
-        if($stock<1) $tr = 'table-danger';
-            $hasDiscount = isset($variant['discount_price']) && $variant['discount_price'] > 0;
-            $priceEUR = $hasDiscount ? $variant['discount_price'] : $variant['price'];
-            $priceUSD = $priceEUR * $rate_usd;
-            $priceAUD = $priceEUR * $rate_aud;
-        ?>
-        <tr class='<?=$tr?>'>
-            <td><strong><?= htmlspecialchars($variant['size']) ?></strong></td>
-            
-            <td>
-                <?php if ($hasDiscount): ?>
-                    <span class="text-muted text-decoration-line-through">€ <?= number_format($variant['price'], 2, ',', '.') ?></span><br>
-                    <span class="text-danger fw-bold">€ <?= number_format($variant['discount_price'], 2, ',', '.') ?></span>
-                <?php else: ?>
-                    € <?= number_format($variant['price'], 2, ',', '.') ?>
-                <?php endif; ?>
-            </td>
-            
-            <td>
-                <?php if ($hasDiscount): ?>
-                    <span class="text-muted text-decoration-line-through">$ <?= number_format($variant['price'] * $rate_usd, 2, ',', '.') ?></span><br>
-                    <span class="text-danger fw-bold">$ <?= number_format($priceUSD, 2, ',', '.') ?></span>
-                <?php else: ?>
-                    $ <?= number_format($priceUSD, 2, ',', '.') ?>
-                <?php endif; ?>
-            </td>
-            
-            <td>
-                <?php if ($hasDiscount): ?>
-                    <span class="text-muted text-decoration-line-through">$ <?= number_format($variant['price'] * $rate_aud, 2, ',', '.') ?></span><br>
-                    <span class="text-danger fw-bold">$ <?= number_format($priceAUD, 2, ',', '.') ?></span>
-                <?php else: ?>
-                    $ <?= number_format($priceAUD, 2, ',', '.') ?>
-                <?php endif; ?>
-            </td>
-        </tr>
-    <?php endforeach; ?>
-</tbody>
+                        <?php foreach ($variants as $variant): ?>
+                            <?php
+                            $stock = $variant['stock'];
+                            $tr = '';
+                            if ($stock < 1) $tr = 'table-danger';
+                            $hasDiscount = isset($variant['discount_price']) && $variant['discount_price'] > 0;
+                            $priceEUR = $hasDiscount ? $variant['discount_price'] : $variant['price'];
+                            $priceUSD = $priceEUR * $rate_usd;
+                            $priceAUD = $priceEUR * $rate_aud;
+                            ?>
+                            <tr class='<?= $tr ?>'>
+                                <td><strong><?= htmlspecialchars($variant['size']) ?></strong></td>
+
+                                <td>
+                                    <?php if ($hasDiscount): ?>
+                                        <span class="text-muted text-decoration-line-through">€
+                                            <?= number_format($variant['price'], 2, ',', '.') ?></span><br>
+                                        <span class="text-danger fw-bold">€
+                                            <?= number_format($variant['discount_price'], 2, ',', '.') ?></span>
+                                    <?php else: ?>
+                                        € <?= number_format($variant['price'], 2, ',', '.') ?>
+                                    <?php endif; ?>
+                                </td>
+
+                                <td>
+                                    <?php if ($hasDiscount): ?>
+                                        <span class="text-muted text-decoration-line-through">$
+                                            <?= number_format($variant['price'] * $rate_usd, 2, ',', '.') ?></span><br>
+                                        <span class="text-danger fw-bold">$ <?= number_format($priceUSD, 2, ',', '.') ?></span>
+                                    <?php else: ?>
+                                        $ <?= number_format($priceUSD, 2, ',', '.') ?>
+                                    <?php endif; ?>
+                                </td>
+
+                                <td>
+                                    <?php if ($hasDiscount): ?>
+                                        <span class="text-muted text-decoration-line-through">$
+                                            <?= number_format($variant['price'] * $rate_aud, 2, ',', '.') ?></span><br>
+                                        <span class="text-danger fw-bold">$ <?= number_format($priceAUD, 2, ',', '.') ?></span>
+                                    <?php else: ?>
+                                        $ <?= number_format($priceAUD, 2, ',', '.') ?>
+                                    <?php endif; ?>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
                 </table>
 
                 <table class='table table-sm table-bordered'>
@@ -203,13 +208,13 @@ $size_guide = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <tr>
                             <td class=''>*Status</td>
                             <td class=''>Available</td>
-                            
-                    </tr>
-                    <tr class='table-danger'>
-                        <td ></td>
-                        <td >Unavailable</td>
-                    </tr>
-                        </thead>
+
+                        </tr>
+                        <tr class='table-danger'>
+                            <td></td>
+                            <td>Unavailable</td>
+                        </tr>
+                    </thead>
                 </table>
 
             </div>
